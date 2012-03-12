@@ -191,8 +191,8 @@ parse_url(Url) ->
                     _ ->
                         UrlRec#url{host_type = hostname}
                 end;
-            _ ->
-                {error, invalid_uri}
+            Else ->
+                Else
         end
     catch _:_ ->
             {error, invalid_uri}
